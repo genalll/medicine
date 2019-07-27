@@ -27,29 +27,45 @@ class Pacient extends React.Component {
                 </header>
                 <div className="main">
                     <div className="wrap main-wrap">
-                        <div className="pacient-data">
-                            <div className="pacient-logo">
-                                <img src="images/cvetaeva.png" alt="Марина Цветаева" />
+                        <div className="left-side">
+                            <div className="pacient-data">
+                                <div className="pacient-logo">
+                                    <img src="images/cvetaeva.png" alt="Марина Цветаева" />
+                                </div>
+                                <div className="pacient-info">
+                                    <div className="info-block">
+                                        <h6>Пациент</h6>
+                                        <p>Марина Ивановна Цветаева</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Дата рождения</h6>
+                                        <p>08 окт 1984</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Номер полиса</h6>
+                                        <p>5635 4525 3465 5632</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Текущий статус</h6>
+                                        <p>Больничный до 17.08.2019</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="pacient-info">
-                                <div className="info-block">
-                                    <h6>Пациент</h6>
-                                    <p>Марина Ивановна Цветаева</p>
-                                </div>
-                                <div className="info-block">
-                                    <h6>Дата рождения</h6>
-                                    <p>08 окт 1984</p>
-                                </div>
-                                <div className="info-block">
-                                    <h6>Номер полиса</h6>
-                                    <p>5635 4525 3465 5632</p>
-                                </div>
-                                <div className="info-block">
-                                    <h6>Текущий статус</h6>
-                                    <p>Больничный до 17.08.2019</p>
+                            <div className="notification">
+                                <div className="alert">Внимание!</div>
+                                <div className="notification-info">
+                                    <div className="info-block">
+                                        <h6>Уведомление</h6>
+                                        <p>Эпидемия гриппа</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Число заболевших</h6>
+                                        <p>1000 человек</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div className="center">
                             <div className="visits">
                                 <h2>Ближайшие посещения</h2>
@@ -83,16 +99,15 @@ class Pacient extends React.Component {
                                     <div className="info-block">
                                         <h6>Дата</h6>
                                         <p>14.08.2019, 16:30</p>
-                                        <a className="info-link" href="/">Отменить посещение</a>
+                                        <a className="info-link" href="/">Перезаписаться</a>
                                     </div>
                                     <div className="info-block">
                                         <h6>Врач</h6>
-                                        <p>Николай Иванович Пирогов</p>
-                                        <a className="info-link" href="/">Перенести на другой день</a>
+                                        <p>Мороз Валентина Ивановна</p>
                                     </div>
                                     <div className="info-block">
                                         <h6>Специальность</h6>
-                                        <p>Хирург</p>
+                                        <p>Терапевт</p>
                                     </div>
                                     <div className="info-block">
                                         <h6>ЛПУ</h6>
@@ -100,7 +115,7 @@ class Pacient extends React.Component {
                                     </div>
                                     <div className="info-block">
                                         <h6>Статус</h6>
-                                        <p>Открыто</p>
+                                        <p>Пропущено</p>
                                     </div>
                                 </div>
                             </div>
