@@ -10,7 +10,6 @@ body {
 .pacient-data {
     width: 218px;
     min-width: 218px;
-    min-height: 500px;
     padding: 20px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
     margin-right: 28px;
@@ -94,4 +93,53 @@ a {
 
 .feedback>h2 {
     margin-bottom: 19px;
+}
+
+@media (max-width: 1180px) {
+    .pacient-data {
+        width: 840px;
+        margin: 0 auto 14px auto;
+    }
+
+    .pacient-info {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+
+    .pacient-info>.info-block {
+        padding: 15px;
+    }
+}
+
+.pacient-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.estimate-buttons {
+    width: 100%;
+    margin-top: 31px;
+    display: flex;
+}
+
+.small-gray-text {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 17px;
+    color: gray;
+    opacity: 0.9;
+}
+
+.fb-h {
+    margin-top: 24px;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+.fb-info {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 20px;
 }
