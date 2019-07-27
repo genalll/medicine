@@ -9,7 +9,7 @@ class Pacient extends React.Component {
     render() {
         return (
             <Fragment>
-                <Popup />
+                {/* <Popup /> */}
                 <header>
                     <div className="wrap">
                         <div className="block-left">
@@ -136,7 +136,7 @@ class Pacient extends React.Component {
                     </div>
                     <div className="footer">
                         <div className="wrap">
-                            <div className="footer-text footer-left">АИС Гиппократ © Все права сохранены</div>
+                            <div className="footer-text footer-left">АИС Гиппократ © Все права защищены</div>
                             <div className="footer-text footer-right">Подключенно к порталу ГосУслуги</div>
                         </div>
                     </div>
