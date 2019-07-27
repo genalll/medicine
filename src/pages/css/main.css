@@ -1,0 +1,68 @@
+main {
+    margin-top: 32px;
+}
+
+body {
+    font-family: Arial;
+}
+
+.pacient-data {
+    width: 218px;
+    min-width: 218px;
+    min-height: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+    margin-right: 28px;
+    margin-bottom: 14px;
+    border-radius: 3px;
+}
+
+.visits, .quest, .feedback {
+    width: 800px;
+    min-height: 200px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+    margin-bottom: 14px;
+    border-radius: 3px;
+    padding: 24px 40px 31px 40px;
+}
+
+.line {
+    margin: 24px 0 24px 0;
+    opacity: 0.5;
+}
+
+.main-wrap {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.visits>h2 {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.info-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 17px;
+    opacity: 0.5;
+}
+
+.info-block>p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+a {
+    color: #2D9CDB;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 17px;
+}
