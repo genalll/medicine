@@ -1,0 +1,96 @@
+.log {
+    position: absolute;
+    text-align: center;
+    width: 1440px;
+    height: 67px;
+    left: 0px;
+    top: -1px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.pat {
+    position: absolute;
+    width: 218px;
+    height: 358px;
+    left: 162px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    top: 20px;
+}
+
+.ln {
+    position: absolute;
+    width: 800px;
+    height: 301px;
+    left: 408px;
+    top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.vn {
+    position: absolute;
+    width: 218px;
+    height: 160px;
+    left: 162px;
+    top: 559px;
+
+    background: #FFFFFF;
+    /* Red */
+
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.bl {
+    position: absolute;
+    width: 218px;
+    height: 75px;
+    left: 162px;
+    top: 470px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.cart {
+    position: absolute;
+    width: 800px;
+    height: 306px;
+    left: 408px;
+    top: 798px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.ots {
+    position: absolute;
+    width: 800px;
+    height: 306px;
+    left: 408px;
+    top: 415px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.ank { 
+    position: absolute;
+    width: 790px;
+    height: 141px;
+    left: 408px;
+    top: 1190px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
