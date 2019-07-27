@@ -6,7 +6,7 @@ class Question extends Component {
         return (
             <Fragment>
                 <div className="question-body">
-                    <p className="question"></p>
+                    <p className="question">{this.props.question}</p>
                 </div>
             </Fragment>
         )
