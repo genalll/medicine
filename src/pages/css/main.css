@@ -1,9 +1,10 @@
-main {
-    margin-top: 32px;
-}
-
 body {
     font-family: Arial;
+}
+
+.main {
+    height: 100%;
+    margin-top: 32px;
 }
 
 .pacient-data {
@@ -17,7 +18,9 @@ body {
     border-radius: 3px;
 }
 
-.visits, .quest, .feedback {
+.visits,
+.quest,
+.feedback {
     width: 800px;
     min-height: 200px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
@@ -34,9 +37,22 @@ body {
 .main-wrap {
     justify-content: center;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .visits>h2 {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.quest>h2 {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.feedback>h2 {
     font-size: 23px;
     line-height: 30px;
     font-weight: normal;
@@ -65,4 +81,17 @@ a {
     text-decoration: none;
     font-size: 12px;
     line-height: 17px;
+    cursor: pointer;
+}
+
+.info-left {
+    justify-content: flex-start;
+}
+
+.info-left>.info-block {
+    margin-right: 45px;
+}
+
+.feedback>h2 {
+    margin-bottom: 19px;
 }

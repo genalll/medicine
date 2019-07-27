@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import './css/header.css';
 import './css/main.css'
+import './css/footer.css'
 
 class Pacient extends React.Component {
     render() {
@@ -18,7 +19,7 @@ class Pacient extends React.Component {
                         </div>
                     </div>
                 </header>
-                <main>
+                <div className="main">
                     <div className="wrap main-wrap">
                         <div className="pacient-data">
                             <div className="pacient-logo"></div>
@@ -80,26 +81,32 @@ class Pacient extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="quest"></div>
-                            <div className="feedback"></div>
+                            <div className="quest">
+                                <h2>Оставить отзыв</h2>
+                            </div>
+                            <div className="feedback">
+                                <h2>Карта пациента</h2>
+                                <div className="info-blocks info-left">
+                                    <div className="info-block">
+                                        <h6>Хронические заболевания</h6>
+                                        <p>Ищимическая болезнь сердца</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Инвалидность</h6>
+                                        <p>Инвалидность отсутствует</p>
+                                    </div>
+                                </div>
+                                <a href="#" className="info-link">Посещения врача</a>
+                            </div>
                         </div>
                     </div>
-                </main>
-
-                {/* <div className="wrap">
-                    <div class="pat">
-                        <p class="Name">Марина Ивановна Цветаева </p>
-                        <p class="date">Дата рождения</p>
-                        <p class="nom">Номер полиса</p>
-                        <p class="pol">Поликлиника</p>
+                    <div className="footer">
+                        <div className="wrap">
+                            <div className="footer-text footer-left">АИС Гиппократ © Все права сохранены</div>
+                            <div className="footer-text footer-right">Подключенно к порталу ГосУслуги</div>
+                        </div>
                     </div>
-                    <div class="ln">Ближайшие посещения</div>
-                    <div class="vn">Внимание</div>
-                    <div> </div>
-                    <div class='bl'>Больничный лист</div>
-                    <div class="ots"> Оставить отзыв</div>
-                    <div class='cart'>Карта пациента</div>
-                </div> */}
+                </div>
             </Fragment>
         )
     }

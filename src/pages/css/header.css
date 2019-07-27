@@ -2,6 +2,10 @@
     margin: 0; padding: 0;
 }
 
+body {
+    height: 100%;
+}
+
 header {
     width: 100%;
     background: #FFFFFF;
@@ -13,7 +17,6 @@ header {
     position: relative;
     margin: 0 auto;
     max-width: 1440px;
-    max-height: 67px;
     display: flex;
     justify-content: space-between;
 }
