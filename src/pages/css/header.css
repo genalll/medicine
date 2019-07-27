@@ -1,0 +1,34 @@
+* {
+    margin: 0; padding: 0;
+}
+
+header {
+    width: 100%;
+    left: 0px;
+    top: -1px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1440px;
+    max-height: 67px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    margin: 7px;
+}
+
+.block-left {
+    display: flex;
+    margin-left: 5px;
+}
+
+.block-right {
+    display: flex;
+    margin-right: 5px;
+}

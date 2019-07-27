@@ -3,7 +3,7 @@ import './css/auth.css'
 import loginData from '../temp_data/login';
 import { Redirect } from 'react-router';
 
-class Auth extends React.Component {
+class Register extends React.Component {
     state = {
         loginValue: '',
         passwordValue: '',
@@ -61,7 +61,6 @@ class Auth extends React.Component {
                 <form className="login">
                     <input autoComplete="off" type="text" placeholder="Username" ref={this.loginInput} onChange={this.updateLoginValue} />
                     <input autoComplete="off" type="password" placeholder="Password" ref={this.passwordInput} onChange={this.updatePasswordValue} />
-                    <button onClick={this.checkLogin}>Login</button>
                     <button onClick={this.checkLogin}>Register</button>
                     {this.renderNext()}
                 </form>
@@ -70,4 +69,4 @@ class Auth extends React.Component {
     }
 }
 
-export default Auth;
+export default Register;
