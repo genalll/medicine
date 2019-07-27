@@ -39,6 +39,12 @@ class Auth extends React.Component {
                 redirect: true,
             })
         }
+
+        this.setState({
+            passwordValue: '',
+        })
+
+        this.passwordInput.current.value = '';
     }
 
     renderNext = () => {
