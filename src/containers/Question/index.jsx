@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import './style.css'
 
 class Question extends Component {
-    state ={
+    state = {
         yes: false,
         no: false,
     }
@@ -21,19 +21,27 @@ class Question extends Component {
         })
     }
 
+    doNothing = () => {
+        //
+    }
+
     render() {
         return (
             <Fragment>
                 <div className="question-body">
-                    <p className="question">{this.props.question}</p>
+                    <div className="question">
+                        <p className="question-number">{this.props.number + 1}.</p>
+                        <p className="question-text">{this.props.question}</p>
+                    </div>
                     <label className="question-radio">
-                        <input className="question-var" type="radio" checked={this.state.yes} onClick={this.setYes} />
+                        <input className="question-var" type="radio" checked={this.state.yes} onClick={this.setYes} onChange={this.doNothing} />
                         Да
                     </label>
                     <label className="question-radio">
-                        <input className="question-var" type="radio" checked={this.state.no} onClick={this.setNo} />
+                        <input className="question-var" type="radio" checked={this.state.no} onClick={this.setNo} onChange={this.doNothing} />
                         Нет
                     </label>
+                    <hr className="underline" />
                 </div>
             </Fragment>
         )

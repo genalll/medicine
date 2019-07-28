@@ -9,7 +9,7 @@
 .popup-form {
     background-color: #fff;
     max-width: 529px;
-    min-height: 915px;
+    min-height: 870px;
     border-radius: 3px;
     margin: 0 auto;
     margin-top: 42px;
@@ -22,4 +22,38 @@
     margin-top: 24px;
     font-size: 23px;
     line-height: 30px;
+}
+
+.question-list :last-child> .underline {
+    display: none;
+}
+
+.question-list {
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+.form-footer {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 59px;
+}
+
+.addition-text-form {
+    margin-left: 24px;
+}
+
+.all-form {
+    display: flex;
+    flex-direction: row;
+    height: 870px;
+    width: 589px;
+    margin: 0 auto;
+}
+
+.cross {
+    height: 20px;
+    margin-top: 42px;
 }

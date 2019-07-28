@@ -10,7 +10,7 @@ class Pacient extends React.Component {
     render() {
         return (
             <Fragment>
-                {/* <Popup /> */}
+                <Popup />
                 <header>
                     <div className="wrap">
                         <div className="block-left">

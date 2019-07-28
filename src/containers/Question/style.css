@@ -1,8 +1,38 @@
 .question-radio {
-    margin: 16px 110px 25px 4px;
+    margin: 16px 0 25px 4px;
 }
 
 .question-var {
     width: 17px;
     height: 17px;
+    margin-left: 54px;
+    margin-top: 16px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"]{
+    margin-right: 12px;
+}
+
+.question {
+    margin-top: 24px;
+    margin-left: 37px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.question-number {
+    margin-right: 4px;
+}
+
+.underline {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    margin-left: 40px;
+    margin-right: 40px;
+    opacity: 0.5;
 }
