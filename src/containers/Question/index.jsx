@@ -21,8 +21,8 @@ class Question extends Component {
         })
     }
 
-    doNothing = () => {
-        //
+    changeButton = () => {
+        console.log('changed')
     }
 
     render() {
@@ -34,11 +34,11 @@ class Question extends Component {
                         <p className="question-text">{this.props.question}</p>
                     </div>
                     <label className="question-radio">
-                        <input className="question-var" type="radio" checked={this.state.yes} onClick={this.setYes} onChange={this.doNothing} />
+                        <input className="question-var" type="radio" checked={this.state.yes} onClick={this.setYes} onChange={this.changeButton} />
                         Да
                     </label>
                     <label className="question-radio">
-                        <input className="question-var" type="radio" checked={this.state.no} onClick={this.setNo} onChange={this.doNothing} />
+                        <input className="question-var" type="radio" checked={this.state.no} onClick={this.setNo} onChange={this.changeButton} />
                         Нет
                     </label>
                     <hr className="underline" />

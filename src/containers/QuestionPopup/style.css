@@ -58,3 +58,64 @@
     margin-top: 42px;
     cursor: pointer;
 }
+
+.give-me-button {
+    cursor: pointer;
+}
+
+.thanks-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+}
+
+.thanks-body {
+    display: flex;
+    flex-direction: column;
+    margin: 59px auto 0 auto;
+    width: 529px;
+    height: 164px;
+    background: #fff;
+    border-radius: 3px;
+    padding-top: 24px;
+}
+
+.thanks-title {
+    margin-left: 39px;
+}
+
+.change-gift {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-gift, .second-gift {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.first-gift {
+    margin-left: 53px;
+    margin-right: 7px;
+}
+
+.second-gift {
+    margin-right: 41px;
+    margin-left: 7px;
+}
+
+.gift-image {
+    min-height: 38px;
+    min-width: 38px;
+    max-height: 38px;
+    max-width: 38px;
+    margin: auto 11px auto 0;
+}

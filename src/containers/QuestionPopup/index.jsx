@@ -35,7 +35,7 @@ const PopupBody = (props) => (
                     ))}
                 </div>
                 <div className="form-footer">
-                    <img src="images/button-blue.svg" alt="blue button" />
+                    <img className="give-me-button" src="images/button-blue.svg" alt="blue button" onClick={props.openThanks} />
                     <div className="addition-text-form">
                         <p>Есть что добавить?</p>
                         <a href="/">Дополнить ответ комментарием</a>
@@ -47,9 +47,28 @@ const PopupBody = (props) => (
     </div>
 )
 
+const ThanksPopup = (props) => (
+    <div className="thanks-popup">
+        <div className="thanks-body">
+            <h2 className="thanks-title">Спасибо! Выберите бонус...</h2>
+            <div className="change-gift">
+                <div className="first-gift">
+                    <img className="gift-image" src="images/gift-1.svg" alt="gift"/>
+                    <p>-5% на посещение санаторий Обуховский</p>
+                </div>
+                <div className="second-gift">
+                    <img className="gift-image" src="images/gitft-2.png" alt="gift"/>
+                    <p>Скидочная карта в аптеку Вита на 30%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+)
+
 class Popup extends Component {
     state = {
         show: true,
+        thanksPopup: false,
     }
 
     handleClick = () => {
@@ -58,12 +77,20 @@ class Popup extends Component {
         })
     }
 
+    openThanks = () => {
+        this.setState({
+            show: false,
+            thanksPopup: true,
+        })
+    }
+
     render() {
-        const { show } = this.state;
+        const { show, thanksPopup } = this.state;
 
         return (
             <Fragment>
-                {show ? <PopupBody handleClick={this.handleClick} /> : <div className="popup-none"></div>}
+                {show ? <PopupBody handleClick={this.handleClick} openThanks={this.openThanks} /> : null}
+                {thanksPopup ? <ThanksPopup /> : null}
             </Fragment>
         )
     }
