@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react';
+import { Redirect } from 'react-router';
 import './style.css'
 
 import Question from '../Question';
@@ -51,13 +52,13 @@ const ThanksPopup = (props) => (
     <div className="thanks-popup">
         <div className="thanks-body">
             <h2 className="thanks-title">Спасибо! Выберите бонус...</h2>
-            <div className="change-gift">
+            <div className="change-gift" onClick={props.closeThanks}>
                 <div className="first-gift">
-                    <img className="gift-image" src="images/gift-1.svg" alt="gift"/>
+                    <img className="gift-image" src="images/gift-1.svg" alt="gift" />
                     <p>-5% на посещение санаторий Обуховский</p>
                 </div>
-                <div className="second-gift">
-                    <img className="gift-image" src="images/gitft-2.png" alt="gift"/>
+                <div className="second-gift" onClick={props.closeThanks}>
+                    <img className="gift-image" src="images/gitft-2.png" alt="gift" />
                     <p>Скидочная карта в аптеку Вита на 30%</p>
                 </div>
             </div>
@@ -69,6 +70,7 @@ class Popup extends Component {
     state = {
         show: true,
         thanksPopup: false,
+        mainPage: false,
     }
 
     handleClick = () => {
@@ -84,13 +86,25 @@ class Popup extends Component {
         })
     }
 
+    closeThanks = () => {
+        this.setState({
+            thanksPopup: false,
+        })
+    }
+
+    redirectToMainPage = () => {
+        this.setState({
+            mainPage: true,
+        })
+    }
+
     render() {
-        const { show, thanksPopup } = this.state;
+        const { show, thanksPopup, mainPage } = this.state;
 
         return (
             <Fragment>
                 {show ? <PopupBody handleClick={this.handleClick} openThanks={this.openThanks} /> : null}
-                {thanksPopup ? <ThanksPopup /> : null}
+                {thanksPopup ? <ThanksPopup closeThanks={this.closeThanks} /> : null}
             </Fragment>
         )
     }
