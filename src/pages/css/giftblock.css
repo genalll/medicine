@@ -1,0 +1,33 @@
+.gift-block {
+    margin: 33px 40px 39px 42px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.thanks-phrase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-gift {
+    margin: 0 20px 0 0;
+}
+
+.thanks-phrase-text>h2 {
+    font-size: 16px;
+    line-height: 21px;
+    color: #219653;
+}
+
+.answer-blue-button {
+    width: 260px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.popup-open-block {
+    margin: auto;
+    margin-left: 20px;
+}

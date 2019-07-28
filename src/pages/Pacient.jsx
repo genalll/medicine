@@ -3,14 +3,77 @@ import './css/header.css';
 import './css/main.css';
 import './css/footer.css';
 import './css/adaptive.css';
+import './css/giftblock.css';
 
 import Popup from '../containers/QuestionPopup';
 
+const EstimateButtons = (props) => (
+    <div className="estimate-buttons">
+        <div className="like-button" onClick={props.openFeedbackGift}>
+            <img src="images/smily_smile.svg" alt="веселый смайл" />
+            <div className="like text">
+                <p className="green-color head-estimate">Мне понравилось!</p>
+                <p className="small-gray-text">Осбслуживание было на хорошем уровне. <br />Врач выписал мне эффективное лечение.</p>
+            </div>
+        </div>
+        <div className="dislike-button" onClick={props.openFeedbackGift}>
+            <img src="images/sad_smile.svg" alt="грустный смайл" />
+            <div className="dislike text">
+                <p className="red-color head-estimate">Есть недочеты.</p>
+                <p className="small-gray-text">В учреждении были грязно. Или врач вел себя <br />не корректно и не соблюдал этику.</p>
+            </div>
+        </div>
+    </div>
+)
+
+const GiftBlock = (props) => (
+    <div className="gift-block">
+        <div className="thanks-phrase">
+            <img className="image-gift" src="images/gift.svg" alt="gift" />
+            <div className="thanks-phrase-text">
+                <h2>Спасибо! Дополните ответ и получите бонус!</h2>
+                <h6>Ответьте на 6 простых вопросов и получите скидки на медицинские товары и услуги наших парнеров.</h6>
+            </div>
+        </div>
+        <div className="popup-open-block">
+            <img className="answer-blue-button" src="/images/blue-button-take.png" alt="take a price" onClick={props.answerTheQuestions} />
+            <h6>Я согласен на обработку персональных данных.</h6>
+        </div>
+    </div>
+)
+
 class Pacient extends React.Component {
+    state = {
+        popup: false,
+        feedbackSmiles: true,
+        feedbackGift: false,
+    }
+
+    openPopup = () => {
+        this.setState({
+            popup: true,
+        })
+    }
+
+    openFeedbackGift = () => {
+        this.setState({
+            feedbackSmiles: false,
+            feedbackGift: true,
+        })
+    }
+
+    answerTheQuestions = () => {
+        this.setState({
+            feedbackSmiles: true,
+            feedbackGift: false,
+            popup: true,
+        })
+    }
+
     render() {
         return (
             <Fragment>
-                <Popup />
+                {this.state.popup ? <Popup /> : null}
                 <header>
                     <div className="wrap">
                         <div className="block-left">
@@ -123,22 +186,8 @@ class Pacient extends React.Component {
                             <div className="quest">
                                 <h2 className="fb-h">Обратная связь</h2>
                                 <p className="fb-info">Оставляя отзыв, Вы делаете нас лучше :)</p>
-                                <div className="estimate-buttons">
-                                    <div className="like-button">
-                                        <img src="images/smily_smile.svg" alt="веселый смайл" />
-                                        <div className="like text">
-                                            <p className="green-color head-estimate">Мне понравилось!</p>
-                                            <p className="small-gray-text">Осбслуживание было на хорошем уровне. <br/>Врач выписал мне эффективное лечение.</p>
-                                        </div>
-                                    </div>
-                                    <div className="dislike-button">
-                                        <img src="images/sad_smile.svg" alt="грустный смайл" />
-                                        <div className="dislike text">
-                                            <p className="red-color head-estimate">Есть недочеты.</p>
-                                            <p className="small-gray-text">В учреждении были грязно. Или врач вел себя <br/>не корректно и не соблюдал этику.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                {this.state.feedbackSmiles ? <EstimateButtons openFeedbackGift={this.openFeedbackGift} /> : 
+                                this.state.feedbackGift ? <GiftBlock answerTheQuestions={this.answerTheQuestions} /> : null}
                             </div>
                             <div className="feedback">
                                 <h2>Карта пациента</h2>
