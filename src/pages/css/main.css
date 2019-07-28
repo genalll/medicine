@@ -22,7 +22,7 @@ body {
 .quest,
 .feedback {
     width: 800px;
-    min-height: 200px;
+    min-height: 150px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
     margin-bottom: 14px;
     border-radius: 3px;
@@ -107,6 +107,7 @@ a {
     width: 100%;
     margin-top: 31px;
     display: flex;
+    cursor: pointer;
 }
 
 .small-gray-text {
@@ -118,7 +119,6 @@ a {
 }
 
 .fb-h {
-    margin-top: 24px;
     font-size: 23px;
     line-height: 30px;
 }
@@ -136,7 +136,6 @@ a {
 .notification {
     width: 218px;
     min-width: 218px;
-    min-height: 160px;
     padding: 20px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
     margin-right: 28px;
