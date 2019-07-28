@@ -170,3 +170,27 @@ a {
 .like-button {
     margin-right: 45px;
 }
+
+.after-visits {
+    margin-top: 23px;
+}
+
+.after-visits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.arrow-visits {
+    margin-bottom: 2px;
+    margin-right: 9px;
+}
+
+.open-arrow-block-visits {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+}

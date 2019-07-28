@@ -42,7 +42,7 @@ const PopupBody = (props) => (
                     </div>
                 </div>
             </form>
-            <img src="images/cross.png" alt="cross" className="cross" onClick={props.handleCrossClick} />
+            <img src="images/cross.png" alt="cross" className="cross-popup" onClick={props.handleCrossClick} />
         </div>
     </div>
 )
@@ -62,6 +62,7 @@ const ThanksPopup = (props) => (
                 </div>
             </div>
         </div>
+        <img src="images/cross.png" alt="cross" className="cross-thanks" onClick={props.closeThanks} />
     </div>
 )
 

@@ -192,8 +192,8 @@ class Pacient extends React.Component {
                             <div className="quest">
                                 <h2 className="fb-h">Обратная связь</h2>
                                 <p className="fb-info">Оставляя отзыв, Вы делаете нас лучше :)</p>
-                                {this.state.feedbackSmiles ? <EstimateButtons openFeedbackGift={this.openFeedbackGift} /> : 
-                                this.state.feedbackGift ? <GiftBlock answerTheQuestions={this.answerTheQuestions} /> : null}
+                                {this.state.feedbackSmiles ? <EstimateButtons openFeedbackGift={this.openFeedbackGift} /> :
+                                    this.state.feedbackGift ? <GiftBlock answerTheQuestions={this.answerTheQuestions} /> : null}
                             </div>
                             <div className="feedback">
                                 <h2>Карта пациента</h2>
@@ -207,7 +207,47 @@ class Pacient extends React.Component {
                                         <p>Инвалидность отсутствует</p>
                                     </div>
                                 </div>
-                                <a href="/" className="info-link">Посещения врача</a>
+                                <div className="open-arrow-block-visits">
+                                    <a href="/" className="info-link">Посещения врача</a>
+                                    <img className="arrow-visits" src="images/arrow-up.png" alt="up arrow" />
+                                </div>
+                                <div className="info-blocks info-left after-visits">
+                                    <div className="info-block">
+                                        <h6>Дата</h6>
+                                        <p>14.08.2019, 16:30</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Врач</h6>
+                                        <p>Николай Иванович Пирогов</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Специальность</h6>
+                                        <p>Хирург</p>
+                                    </div>
+                                    <div className="info-block recommendations">
+                                        <h6>Рекомендации</h6>
+                                        <p>Контроль артериального давления, наблюдение у терапевта раз в три месяца с коррекцией терапиии. Исключить нагрузки, соответствующий образ труда и отдыха.</p>
+                                    </div>
+                                </div>
+                                <hr className="line" />
+                                <div className="info-blocks info-left after-visits">
+                                    <div className="info-block">
+                                        <h6>Дата</h6>
+                                        <p>18.11.2019, 11:15</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Врач</h6>
+                                        <p>Мороз Валентина Ивановна</p>
+                                    </div>
+                                    <div className="info-block">
+                                        <h6>Специальность</h6>
+                                        <p>Терапевт</p>
+                                    </div>
+                                    <div className="info-block recommendations">
+                                        <h6>Рекомендации</h6>
+                                        <p>Контроль артериального давления, наблюдение у терапевта раз в три месяца с коррекцией терапиии. Исключить нагрузки, соответствующий образ труда и отдыха.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
