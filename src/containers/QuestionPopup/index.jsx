@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import { Redirect } from 'react-router';
 import './style.css'
 
 import Question from '../Question';
@@ -43,7 +42,7 @@ const PopupBody = (props) => (
                     </div>
                 </div>
             </form>
-            <img src="images/cross.png" alt="cross" className="cross" onClick={props.handleClick} />
+            <img src="images/cross.png" alt="cross" className="cross" onClick={props.handleCrossClick} />
         </div>
     </div>
 )
@@ -73,10 +72,11 @@ class Popup extends Component {
         mainPage: false,
     }
 
-    handleClick = () => {
+    handleCrossClick = () => {
         this.setState({
             show: false,
         })
+        this.props.closePopup();
     }
 
     openThanks = () => {
@@ -90,6 +90,7 @@ class Popup extends Component {
         this.setState({
             thanksPopup: false,
         })
+        this.props.closePopup();
     }
 
     redirectToMainPage = () => {
@@ -99,11 +100,11 @@ class Popup extends Component {
     }
 
     render() {
-        const { show, thanksPopup, mainPage } = this.state;
+        const { show, thanksPopup } = this.state;
 
         return (
             <Fragment>
-                {show ? <PopupBody handleClick={this.handleClick} openThanks={this.openThanks} /> : null}
+                {show ? <PopupBody handleCrossClick={this.handleCrossClick} openThanks={this.openThanks} /> : null}
                 {thanksPopup ? <ThanksPopup closeThanks={this.closeThanks} /> : null}
             </Fragment>
         )

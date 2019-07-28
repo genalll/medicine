@@ -70,10 +70,16 @@ class Pacient extends React.Component {
         })
     }
 
+    closePopup = () => {
+        this.setState({
+            popup: false,
+        })
+    }
+
     render() {
         return (
             <Fragment>
-                {this.state.popup ? <Popup /> : null}
+                {this.state.popup ? <Popup closePopup={this.closePopup} /> : null}
                 <header>
                     <div className="wrap">
                         <div className="block-left">
