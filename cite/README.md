@@ -1,4 +1,5 @@
 ## Available Scripts
+The project was created using React.
 
 In the project directory, you can run:
 
