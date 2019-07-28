@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import './css/header.css';
 import './css/main.css';
 import './css/footer.css';
+import './css/adaptive.css';
 
 import Popup from '../containers/QuestionPopup';
 
@@ -123,13 +124,19 @@ class Pacient extends React.Component {
                                 <h2 className="fb-h">Обратная связь</h2>
                                 <p className="fb-info">Оставляя отзыв, Вы делаете нас лучше :)</p>
                                 <div className="estimate-buttons">
-                                    <div className="like">
-                                        <p className="green-color head-estimate">Мне понравилось!</p>
-                                        <p className="small-gray-text">Осбслуживание было на хорошем уровне. Врач выписал мне эффективное лечение.</p>
+                                    <div className="like-button">
+                                        <img src="images/smily_smile.svg" alt="веселый смайл" />
+                                        <div className="like text">
+                                            <p className="green-color head-estimate">Мне понравилось!</p>
+                                            <p className="small-gray-text">Осбслуживание было на хорошем уровне. <br/>Врач выписал мне эффективное лечение.</p>
+                                        </div>
                                     </div>
-                                    <div className="dislike">
-                                        <p className="red-color head-estimate">Есть недочеты.</p>
-                                        <p className="small-gray-text">В учреждении были грязно. Или врач вел себя не корректно и не соблюдал этику.</p>
+                                    <div className="dislike-button">
+                                        <img src="images/sad_smile.svg" alt="грустный смайл" />
+                                        <div className="dislike text">
+                                            <p className="red-color head-estimate">Есть недочеты.</p>
+                                            <p className="small-gray-text">В учреждении были грязно. Или врач вел себя <br/>не корректно и не соблюдал этику.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,8 +158,8 @@ class Pacient extends React.Component {
                     </div>
                     <div className="footer">
                         <div className="wrap">
-                            <div className="footer-text footer-left">АИС Гиппократ © Все права защищены</div>
-                            <div className="footer-text footer-right">Подключенно к порталу ГосУслуги</div>
+                            <div className="footer-text footer-left"><b>АИС Гиппократ</b> © Все права защищены</div>
+                            <div className="footer-text footer-right">Подключенно к порталу <b>ГосУслуги</b></div>
                         </div>
                     </div>
                 </div>

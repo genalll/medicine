@@ -1,0 +1,20 @@
+@media (max-width: 1180px) {
+    .pacient-data {
+        width: 840px;
+        margin: 0 auto 14px auto;
+    }
+
+    .pacient-info {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+
+    .pacient-info>.info-block {
+        padding: 15px;
+    }
+
+    .notification {
+        width: 840px;
+        margin: 0 auto 14px auto;
+    }
+}

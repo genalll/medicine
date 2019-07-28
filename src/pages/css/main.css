@@ -96,22 +96,6 @@ a {
     margin-bottom: 19px;
 }
 
-@media (max-width: 1180px) {
-    .pacient-data {
-        width: 840px;
-        margin: 0 auto 14px auto;
-    }
-
-    .pacient-info {
-        flex-direction: row !important;
-        flex-wrap: wrap;
-    }
-
-    .pacient-info>.info-block {
-        padding: 15px;
-    }
-}
-
 .pacient-info {
     display: flex;
     flex-direction: column;
@@ -171,4 +155,18 @@ a {
 
 .info-block {
     min-width: 77px;
+}
+
+.dislike-button, .like-button {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.dislike-button>img, .like-button>img {
+    margin-right: 14px;
+}
+
+.like-button {
+    margin-right: 45px;
 }
