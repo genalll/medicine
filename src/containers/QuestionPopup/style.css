@@ -56,4 +56,5 @@
 .cross {
     height: 20px;
     margin-top: 42px;
+    cursor: pointer;
 }
